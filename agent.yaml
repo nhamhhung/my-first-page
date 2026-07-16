@@ -1,0 +1,21 @@
+apiVersion: platform.solo-unicorn.ai/v1
+kind: Workload
+metadata:
+  name: my-first-page
+spec:
+  type: web
+  runtime:
+    dockerfile: Dockerfile
+    context: "."
+  build:
+    test: "python3 -m unittest discover -s tests -q"
+  interfaces:
+    http:
+      portEnv: PORT
+      health: "/healthz"
+  env:
+    required: [SITE_PASSWORD]
+    optional: [PORT]
+  capabilities: []
+# Thin platform.solo-unicorn.ai/v1 Workload contract: Docker facts + interfaces + env NAMES only.
+# Governance, deploy placement, monitoring, and the kill-switch are PLATFORM guarantees.

@@ -1,0 +1,25 @@
+{
+  "stage": "deploy-check",
+  "agent": "my-first-page",
+  "kind": "web",
+  "framework": "python-fastapi",
+  "builder": null,
+  "dockerfile": "Dockerfile",
+  "context": ".",
+  "base_image": null,
+  "port_env": "PORT",
+  "healthcheck": "/healthz",
+  "healthcheck_declared": true,
+  "build_ok": true,
+  "run_ok": true,
+  "health_ok": true,
+  "http_status": 200,
+  "logs_tail": "INFO:     172.17.0.1:61438 - \"GET /healthz HTTP/1.1\" 200 OK\nINFO:     Started server process [7]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)",
+  "verdict": "pass",
+  "gaps": [],
+  "detail": "ok",
+  "stack": [
+    "app"
+  ],
+  "db_required": false
+}

@@ -1,0 +1,33 @@
+{
+  "protocolVersion": "0.3.0",
+  "name": "my-first-page",
+  "description": "Web app: password login, dashboard, one bounded 'Ask AI' action.",
+  "url": "https://my-first-page.example",
+  "version": "0.1.0",
+  "capabilities": {
+    "streaming": false
+  },
+  "securitySchemes": {
+    "session_cookie": {
+      "type": "apiKey",
+      "in": "cookie",
+      "name": "session"
+    }
+  },
+  "defaultInputModes": [
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "web",
+      "name": "Answer one bounded AI question for a logged-in user",
+      "description": "Answer one bounded AI question for a logged-in user",
+      "tags": [
+        "web"
+      ]
+    }
+  ]
+}
